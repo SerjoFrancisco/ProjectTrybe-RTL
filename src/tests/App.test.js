@@ -20,8 +20,8 @@ describe('Test App.js', () => {
     const aboutLink = screen.getByRole('link', { name: 'About' });
     expect(aboutLink).toBeInTheDocument();
     userEvent.click(aboutLink);
-    // const { pathname } = history.location;
-    // expect(pathname).toBe('/about');
+    const { pathname } = history.location;
+    expect(pathname).toBe('/about');
     const aboutTitle = screen.getByRole('heading', { name: 'About Pokédex' });
     expect(aboutTitle).toBeInTheDocument();
   });
